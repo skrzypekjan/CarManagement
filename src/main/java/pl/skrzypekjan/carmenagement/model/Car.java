@@ -5,13 +5,13 @@ public class Car {
   private long carId;
   private String mark;
   private String model;
-  private Color color;
+  private String color;
   private long productionYear;
 
-  public Car(long id, String mark, String model, Color color, int prodYear) {
+  public Car(long id, String mark, String model, String color, int prodYear) {
   }
 
-  public Car(long carId, String mark, String model, Color color, long productionYear) {
+  public Car(long carId, String mark, String model, String color, long productionYear) {
     this.carId = carId;
     this.mark = mark;
     this.model = model;
@@ -42,14 +42,13 @@ public class Car {
     this.model = model;
   }
 
-
-  public Color getColor() {
+  public String getColor() {
     return color;
   }
-  public void setColor(Color color) {
+
+  public void setColor(String color) {
     this.color = color;
   }
-
 
   public long getProductionYear() {
     return productionYear;
