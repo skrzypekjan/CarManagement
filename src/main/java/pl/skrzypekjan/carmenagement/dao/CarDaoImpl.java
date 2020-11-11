@@ -13,6 +13,7 @@ import java.util.Map;
 public class CarDaoImpl implements CarDao{
 
     private JdbcTemplate jdbcTemplate;
+    public static long count = 1;
 
     @Autowired
     public CarDaoImpl(JdbcTemplate jdbcTemplate) {
@@ -20,8 +21,8 @@ public class CarDaoImpl implements CarDao{
     }
 
     @Override
-    public void addCar(long id, String mark, String model, String color, int prodYear) {
-        Car car = new Car(id, mark, model, color, prodYear);
+    public void addCar(String mark, String model, String color, long productionYear) {
+        Car car = new Car(mark, model, color, productionYear);
         String sql = "INSERT INTO cars VALUES (?, ?, ?, ?, ?)";
         jdbcTemplate.update(sql, car.getCarId(), car.getMark(), car.getModel(), car.getColor(), car.getProductionYear());
     }

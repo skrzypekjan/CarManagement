@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CarDao {
 
-    void addCar(long id, String mark, String model, String color, int prodYear);
+    void addCar(String mark, String model, String color, long productionYear);
 
     void updateCar(Car newCar);
 
