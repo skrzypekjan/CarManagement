@@ -33,9 +33,7 @@ public class CarController {
 
     @RequestMapping(value = "/add-car", method = RequestMethod.POST)
     public String addCar(@ModelAttribute Car car) {
-        System.out.println(car);
         carDao.addCar(car.getMark(), car.getModel(), car.getColor(), car.getProductionYear());
-        System.out.println(car);
         return "redirect:/";
     }
 }
